@@ -17,3 +17,30 @@ pre {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+code.language-html::before{
+  content: "HTML";
+  display: block;
+  background: #eef;
+  color: #34d;
+  text-align: center;
+  width: 100px;
+}
+
+code.language-css::before{
+  content: "CSS";
+  display: block;
+  background: #eef;
+  color: #34d;
+  text-align: center;
+  width: 100px;
+}
+
+code.language-javascript::before{
+  content: "JS";
+  display: block;
+  background: #eef;
+  color: #34d;
+  text-align: center;
+  width: 100px;
+}
