@@ -5,14 +5,13 @@ tags: [loading, fe, svg]
 ---
 # loading图标实现
 ## 代码实现
-{% highlight html %}
+{% highlight javascript %}
 <div>
   <i>
     <svg viewBox="0 0 1096 1096"class="anticon-spin" data-icon="loading" width="2em" height="2em" fill="currentColor" aria-hidden="true"><path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"></path></svg>
   </i>
   <span>loading</span>
 </div>
-
 {% endhighlight %}
 ## 知识点
 ### `<i>`元素设置图标
@@ -21,7 +20,7 @@ tags: [loading, fe, svg]
 ### svg标签的viewBox属性
 刚上手的时候遇到了SVG下面的path很大，超出显示区域，可以尝试设置下svg的width，height为很大的值，暂时让她显示出来一部分，告诉自己图标过大，而不是程序bug未显示。然后通过设置viewBox属性的值来缩小图标。
 viewBox的四个参数分别代表：最小X轴数值；最小y轴数值；宽度；高度。
-![aaa](https://github.com/yhddx/Practice/blob/master/pics/svg.jpg?raw=true)
+<img src="https://github.com/yhddx/Practice/blob/master/pics/svg.jpg?raw=true" style="display:block;width: 400px;">
 
 ### c 动画
 
