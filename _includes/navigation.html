@@ -1,5 +1,22 @@
 <nav id="nav">
-    {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-    {% endfor %}
-  </nav>
+  {% assign even = true %}
+  {% assign cls = "" %}
+  {% for item in site.data.navigation %}
+    {% if even %}
+      {% assign even = false %}
+      {% if page.url == item.link or (include.is_post == "1" and item.name == "Blog") %}
+        {% assign cls = "current idx_even" %}
+      {% else %}
+        {% assign cls = "idx_even" %}
+      {% endif %}
+    {% else %}
+      {% assign even = true %}
+      {% if page.url == item.link or (include.is_post == "1" and item.name == "Blog") %}
+        {% assign cls = "current idx_odd" %}
+      {% else %}
+        {% assign cls = "idx_odd" %}
+      {% endif %}
+    {% endif %}
+    <a href="{{ item.link }}" class="{{ cls }}">{{ item.name }}</a>
+  {% endfor %}
+</nav>

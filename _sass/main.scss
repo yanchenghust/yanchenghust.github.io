@@ -1,9 +1,25 @@
 body {
   font-size: 1.2em;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: Palatino,Garamond,Times,Georgia,serif;
+}
+code, kbd, pre, samp {
+  font-family: consolas;
+}
 
 nav#nav {
   font-size: 2em;
+  a{
+    display: inline-block;
+    padding: 10px 30px;
+  }
+  a.current.idx_even {
+    transform: rotate(5deg);
+  }
+  a.current.idx_odd {
+    transform: rotate(-5deg);
+  }
 }
 
 .current {
@@ -14,45 +30,40 @@ nav#nav {
 figure.highlight {
   background: #000;
   margin: 0px;
-  padding: 0.3em 0.3em;
-  code {
-    font-family: menlo;
+  pre{
+    margin: 0;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    code {
+      font-family: Monaco;
+      font-size: 0.8em;
+    }
+    code::before {
+      transform: rotate(-15deg);
+      display: block;
+      background: #eef;
+      text-align: center;
+      width: 100px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    code.language-html::before {
+      content: "HTML";
+      color: #34d;
+    }
+    code.language-css::before {
+      content: "CSS";
+      color: #34d;
+    }
+    code.language-javascript::before {
+      content: "JS";
+      color: #34d;
+    }
   }
-}
-
-pre {
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
-}
-
-code.language-html::before {
-  content: "HTML";
-  display: block;
-  background: #eef;
-  color: #34d;
-  text-align: center;
-  width: 100px;
-}
-
-code.language-css::before {
-  content: "CSS";
-  display: block;
-  background: #eef;
-  color: #34d;
-  text-align: center;
-  width: 100px;
-}
-
-code.language-javascript::before {
-  content: "JS";
-  display: block;
-  background: #eef;
-  color: #34d;
-  text-align: center;
-  width: 100px;
+ 
 }
 
 blockquote {
