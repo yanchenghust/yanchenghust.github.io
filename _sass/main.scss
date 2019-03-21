@@ -1,24 +1,34 @@
-.current {
-    color: green;
-    background: #ecc;
-  }
+body {
+  font-size: 1.2em;
+}
 
-figure.highlight{
-    background: #000;
-    margin: 0px;
-    padding: 0.3em 0.3em;
-    font-size: 14px;
+nav#nav {
+  font-size: 2em;
+}
+
+.current {
+  color: green;
+  background: #ecc;
+}
+
+figure.highlight {
+  background: #000;
+  margin: 0px;
+  padding: 0.3em 0.3em;
+  code {
+    font-family: menlo;
+  }
 }
 
 pre {
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
-code.language-html::before{
+code.language-html::before {
   content: "HTML";
   display: block;
   background: #eef;
@@ -27,7 +37,7 @@ code.language-html::before{
   width: 100px;
 }
 
-code.language-css::before{
+code.language-css::before {
   content: "CSS";
   display: block;
   background: #eef;
@@ -36,11 +46,21 @@ code.language-css::before{
   width: 100px;
 }
 
-code.language-javascript::before{
+code.language-javascript::before {
   content: "JS";
   display: block;
   background: #eef;
   color: #34d;
   text-align: center;
   width: 100px;
+}
+
+blockquote {
+  border-left: 6px solid #8282e2;
+  margin-left: 0;
+  padding-left: 6px;
+}
+
+nav#nav + h1 + p {
+  font-size: 1.2em;
 }
